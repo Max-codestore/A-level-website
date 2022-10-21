@@ -1,0 +1,113 @@
+<html>
+<head>
+<link rel="shortcut icon" href="../faviconit/favicon.ico"> 
+<link rel="icon" sizes="16x16 32x32 64x64" href="../faviconit/favicon.ico"> 
+<link rel="icon" type="image/png" sizes="196x196" href="../faviconit/favicon-192.png"> 
+<link rel="icon" type="image/png" sizes="160x160" href="../faviconit/favicon-160.png"> 
+<link rel="icon" type="image/png" sizes="96x96" href="../faviconit/favicon-96.png"> 
+<link rel="icon" type="image/png" sizes="64x64" href="../faviconit/favicon-64.png"> 
+<link rel="icon" type="image/png" sizes="32x32" href="../faviconit/favicon-32.png"> 
+<link rel="icon" type="image/png" sizes="16x16" href="../faviconit/favicon-16.png"> 
+<link rel="apple-touch-icon" href="../faviconit/favicon-57.png"> 
+<link rel="apple-touch-icon" sizes="114x114" href="../faviconit/favicon-114.png"> 
+<link rel="apple-touch-icon" sizes="72x72" href="../faviconit/favicon-72.png"> 
+<link rel="apple-touch-icon" sizes="144x144" href="../faviconit/favicon-144.png"> 
+<link rel="apple-touch-icon" sizes="60x60" href="../faviconit/favicon-60.png"> 
+<link rel="apple-touch-icon" sizes="120x120" href="../faviconit/favicon-120.png"> 
+<link rel="apple-touch-icon" sizes="76x76" href="../faviconit/favicon-76.png"> 
+<link rel="apple-touch-icon" sizes="152x152" href="../faviconit/favicon-152.png"> 
+<link rel="apple-touch-icon" sizes="180x180" href="../faviconit/favicon-180.png"> 
+<meta name="msapplication-TileColor" content="#FFFFFF"> 
+<meta name="msapplication-TileImage" content=".../faviconit/favicon-144.png"> 
+<meta name="msapplication-config" content="../faviconit/browserconfig.xml"> 
+<link type="text/css" rel="stylesheet" href="../style.css">
+<title>MKlearn contry locations quiz</title>
+</head>
+<body>
+<h1><img src="../images/site_logo.png" width="400" height="200"></h1>
+<script type="text/javascript">
+window.onload = () => {
+  const a = document.querySelector("#name");
+  const b = document.querySelector("#submit");
+  if (!a) throw Error("Not defined!");
+  if (!b) throw Error("Button not found!");
+
+  b.addEventListener("click", () => {
+    const _av = a.value;
+    if (!_av) a.style.backgroundColor = 'red';
+    else {
+      console.log("submit")
+    }
+  }, false);
+
+  a.addEventListener("keypress", () => {
+    if (a.value) a.style.backgroundColor = 'white'
+  }, false);
+}
+    </script>
+<form method="POST" action="../cgi-bin/quiz.pyw">
+<div class="name">
+   name<input type="text" name ="name" id="name">
+   </div>
+
+<legend>Which continent is Spain in?</legend>
+<div class="radio-toolbar">
+Europe<input type="radio" name="q1" value="Europe" >
+Asia<input type="radio" name="q1" value="Asia"> 
+Africa<input type="radio" name="q1" value="Africa"> 
+<br> <br> 
+<legend>Which continent is Japan in?</legend> 
+Europe<input type="radio" name="q2" value="Europe" > 
+South America<input type="radio" name="q2" value="South_America"> 
+Asia<input type="radio" name="q2" value="Asia"> 
+<br><br>
+<legend>Which continent is Madagascar in?</legend>
+    Australasia/Oceania<input type="radio" name="q3" value="Australasia/Oceania" >
+Africa<input type="radio" name="q3" value="Africa"> 
+Asia<input type="radio" name="q3" value="Asia"> 
+<br> <br> 
+<legend>Which continent is Canada in?</legend> 
+South America<input type="radio" name="q4" value="South_America" > 
+North America<input type="radio" name="q4" value="North_America"> 
+East America<input type="radio" name="q4" value="East_America"> 
+<br> <br> 
+<legend>Which continent is the Falkland Islands in?</legend>
+North America<input type="radio" name="q5" value="North_America" >
+Australasia/Oceania<input type="radio" name="q5" value="Australasia/Oceania"> 
+South America<input type="radio" name="q5" value="South_America"> 
+<br> <br> 
+<img src="images/flag40234.png">
+<br><br>
+<legend>These two flags are for the same nation but where is that nation located.</legend> 
+Australasia/Oceania<input type="radio" name="q6" value="Australasia/Oceania" > 
+Asia<input type="radio" name="q6" value="Asia"> 
+Europe<input type="radio" name="q6" value="Europe"> 
+<br> <br> 
+<legend>Which continent is Veitnam in?</legend>
+Asia <input type="radio" name="q7" value="Asia" >
+South America <input type="radio" name="q7" value="South_America"> 
+Africa <input type="radio" name="q7" value="Africa"> 
+<br> <br> 
+<img src="images/flag40235.png">
+<br><br>
+<legend>Which continent is the nation which this flag repersents located?</legend> 
+Europe<input type="radio" name="q8" value="Europe" > 
+Africa<input type="radio" name="q8" value="Africa"> 
+South America<input type="radio" name="q8" value="South_America"> 
+<br> <br> 
+<legend>Which continent is Panama in?</legend>
+North America<input type="radio" name="q9" value="North_America" >
+South America <input type="radio" name="q9" value="South_America"> 
+Asia <input type="radio" name="q9" value="Asia"> 
+<br> <br> 
+<legend>Which continent is Poland in?</legend> 
+South America<input type="radio" name="q10" value="South_America" > 
+Europe<input type="radio" name="q10" value="Europe"> 
+Australasia/Oceania <input type="radio" name="q10" value="Australasia/Oceania"> 
+<br><br>
+</div>
+<input type="submit" value="Submit" id="submit">
+</form>
+
+</body>
+</html>
